@@ -9,7 +9,6 @@ import DownloadCTA from "../components/division/DownloadCTA";
 import ContactForm from "../components/division/ContactForm";
 import WhatWeBuild from "../components/division/steel/WhatWeBuild";
 import Software from "../components/division/steel/Software";
-import { useLanguage } from "../lib/LanguageContext";
 import heroPhoto from "../assets/edro/steelstructure3.jpeg";
 import {
   HERO,
@@ -24,10 +23,8 @@ import {
 } from "../data/divisions/steelStructures";
 
 export default function SteelStructures() {
-  const { dir } = useLanguage();
-
   return (
-    <div dir={dir} className="bg-ink text-fg font-sans min-h-screen">
+    <div className="bg-ink text-fg font-sans min-h-screen">
       <Header />
       <DivisionHero hero={HERO} photo={heroPhoto} />
       <WhatWeBuild data={WHAT_WE_BUILD} />

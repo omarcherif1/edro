@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { DIVISIONS } from "../data/home";
-import { useLanguage } from "../lib/LanguageContext";
 import storageTankPhoto from "../assets/edro/storagetank3.jpeg";
 import steelStructurePhoto from "../assets/edro/steelstructure5.png";
 import pipelinePhoto from "../assets/edro/piping2.jpeg";
@@ -19,10 +18,8 @@ const PHOTOS = {
 };
 
 export default function Services() {
-  const { dir } = useLanguage();
-
   return (
-    <div dir={dir} className="bg-ink text-fg font-sans min-h-screen flex flex-col">
+    <div className="bg-ink text-fg font-sans min-h-screen flex flex-col">
       <Header />
 
       <section className="border-b border-line bg-ink">

@@ -5,14 +5,11 @@ import Commitment from "../components/hse/Commitment";
 import PermitsGrid from "../components/hse/PermitsGrid";
 import QaqcChain from "../components/hse/QaqcChain";
 import Certifications from "../components/hse/Certifications";
-import { useLanguage } from "../lib/LanguageContext";
 import { HERO, COMMITMENT, PERMITS, QAQC, CERTS } from "../data/hseQuality";
 
 export default function HseQuality() {
-  const { dir } = useLanguage();
-
   return (
-    <div dir={dir} className="bg-ink text-fg font-sans min-h-screen">
+    <div className="bg-ink text-fg font-sans min-h-screen">
       <Header />
       <HseHero hero={HERO} />
       <Commitment data={COMMITMENT} />

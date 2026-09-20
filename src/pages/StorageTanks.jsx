@@ -9,7 +9,6 @@ import DownloadCTA from "../components/division/DownloadCTA";
 import ContactForm from "../components/division/ContactForm";
 import WhatWeBuild from "../components/division/storage-tanks/WhatWeBuild";
 import TankDiagram from "../components/division/storage-tanks/TankDiagram";
-import { useLanguage } from "../lib/LanguageContext";
 import heroPhoto from "../assets/edro/storagetank1.jpeg";
 import {
   HERO,
@@ -24,10 +23,8 @@ import {
 } from "../data/divisions/storageTanks";
 
 export default function StorageTanks() {
-  const { dir } = useLanguage();
-
   return (
-    <div dir={dir} className="bg-ink text-fg font-sans min-h-screen">
+    <div className="bg-ink text-fg font-sans min-h-screen">
       <Header />
       <DivisionHero hero={HERO} photo={heroPhoto} />
       <WhatWeBuild data={WHAT_WE_BUILD} />

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { useLanguage } from "../lib/LanguageContext";
 import { DIVISION_FILTERS, PROJECTS } from "../data/projects";
 
 function divLabel(div) {
@@ -12,7 +11,6 @@ function divShort(div) {
 }
 
 export default function Projects() {
-  const { dir } = useLanguage();
   const [filter, setFilter] = useState("all");
   const [openId, setOpenId] = useState(null);
 
@@ -20,7 +18,7 @@ export default function Projects() {
   const openProject = openId ? PROJECTS.find((p) => p.id === openId) : null;
 
   return (
-    <div dir={dir} className="bg-ink text-fg font-sans min-h-screen flex flex-col">
+    <div className="bg-ink text-fg font-sans min-h-screen flex flex-col">
       <Header />
 
       <section className="border-b border-line bg-ink">

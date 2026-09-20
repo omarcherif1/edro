@@ -27,7 +27,7 @@ export default function DivisionHero({ hero, photo }) {
           >
             <svg
               viewBox="0 0 24 24"
-              className="w-3.5 h-3.5 rtl:-scale-x-100 transition-transform duration-150 group-hover:-translate-x-0.5"
+              className="w-3.5 h-3.5 transition-transform duration-150 group-hover:-translate-x-0.5"
               fill="none"
               stroke="currentColor"
               strokeWidth="1.5"

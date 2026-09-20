@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/EDRO.png";
-import { useLanguage } from "../lib/LanguageContext";
 
 const DIVISION_PATHS = [
   "/services",
@@ -11,7 +10,6 @@ const DIVISION_PATHS = [
 ];
 
 export default function Header() {
-  const { dir, setLtr, setRtl } = useLanguage();
   const [compact, setCompact] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const { pathname } = useLocation();
@@ -88,21 +86,6 @@ export default function Header() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-4 shrink-0">
-          <div className="flex items-center gap-2 font-mono text-[11px]">
-            <span
-              onClick={setLtr}
-              className={`cursor-pointer ${dir === "rtl" ? "text-muted" : "text-fg"}`}
-            >
-              EN
-            </span>
-            <span className="text-line">/</span>
-            <span
-              onClick={setRtl}
-              className={`cursor-pointer ${dir === "rtl" ? "text-fg" : "text-muted"}`}
-            >
-              AR
-            </span>
-          </div>
           <Link
             to="/#contact"
             className="h-[42px] px-5 bg-accent text-white flex items-center font-mono text-[11px] tracking-[0.12em] uppercase hover:bg-accent-hover hover:text-white transition-colors"
@@ -140,7 +123,7 @@ export default function Header() {
 
       <div
         className={`lg:hidden fixed top-0 bottom-0 end-0 z-50 w-[82vw] max-w-[340px] bg-ink border-s border-line flex flex-col transition-transform duration-250 ease-out ${
-          mobileOpen ? "translate-x-0" : "rtl:-translate-x-full translate-x-full"
+          mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="flex items-center justify-between px-6 h-[76px] border-b border-line shrink-0">
@@ -176,23 +159,8 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="mt-auto">
-          <div className="flex items-center gap-2 font-mono text-[12px] px-6 py-5 border-t border-line">
-            <span
-              onClick={setLtr}
-              className={`cursor-pointer ${dir === "rtl" ? "text-muted" : "text-fg"}`}
-            >
-              EN
-            </span>
-            <span className="text-line">/</span>
-            <span
-              onClick={setRtl}
-              className={`cursor-pointer ${dir === "rtl" ? "text-fg" : "text-muted"}`}
-            >
-              AR
-            </span>
-          </div>
-          <div className="px-6 pb-8">
+        <div className="mt-auto border-t border-line">
+          <div className="px-6 pt-6 pb-8">
             <Link
               to="/#contact"
               className="h-[46px] px-5 bg-accent text-white flex items-center justify-center font-mono text-[12px] tracking-[0.12em] uppercase"

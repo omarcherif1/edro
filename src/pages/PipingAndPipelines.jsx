@@ -9,7 +9,6 @@ import DownloadCTA from "../components/division/DownloadCTA";
 import ContactForm from "../components/division/ContactForm";
 import WhatWeBuild from "../components/division/piping/WhatWeBuild";
 import Comparison from "../components/division/piping/Comparison";
-import { useLanguage } from "../lib/LanguageContext";
 import heroPhoto from "../assets/edro/piping5.png";
 import {
   HERO,
@@ -24,10 +23,8 @@ import {
 } from "../data/divisions/pipingPipelines";
 
 export default function PipingAndPipelines() {
-  const { dir } = useLanguage();
-
   return (
-    <div dir={dir} className="bg-ink text-fg font-sans min-h-screen">
+    <div className="bg-ink text-fg font-sans min-h-screen">
       <Header />
       <DivisionHero hero={HERO} photo={heroPhoto} />
       <WhatWeBuild data={WHAT_WE_BUILD} />

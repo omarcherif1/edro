@@ -8,10 +8,8 @@ import Divisions from "../components/home/Divisions";
 import Execution from "../components/home/Execution";
 import SitePhotography from "../components/home/SitePhotography";
 import Contact from "../components/home/Contact";
-import { useLanguage } from "../lib/LanguageContext";
 
 export default function Home() {
-  const { dir } = useLanguage();
   const { hash } = useLocation();
 
   useEffect(() => {
@@ -21,7 +19,7 @@ export default function Home() {
   }, [hash]);
 
   return (
-    <div dir={dir} className="bg-ink text-fg font-sans min-h-screen">
+    <div className="bg-ink text-fg font-sans min-h-screen">
       <Header />
       <Hero />
       <StandardsBand />
