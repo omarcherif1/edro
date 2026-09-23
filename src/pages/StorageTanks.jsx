@@ -6,7 +6,7 @@ import ConstructionSequence from "../components/division/ConstructionSequence";
 import MaintenanceRepair from "../components/division/MaintenanceRepair";
 import QualityDocumentation from "../components/division/QualityDocumentation";
 import DownloadCTA from "../components/division/DownloadCTA";
-import ContactForm from "../components/division/ContactForm";
+// import ContactForm from "../components/division/ContactForm"; // disabled until email sending is wired up
 import WhatWeBuild from "../components/division/storage-tanks/WhatWeBuild";
 import TankDiagram from "../components/division/storage-tanks/TankDiagram";
 import heroPhoto from "../assets/edro/storagetank1.jpeg";
@@ -39,12 +39,12 @@ export default function StorageTanks() {
       />
       <QualityDocumentation num="06" dossiers={DOSSIERS} />
       <DownloadCTA title={DOWNLOAD_TITLE} />
-      <ContactForm
+      {/* <ContactForm
         heading={CONTACT.heading}
         desc={CONTACT.desc}
         messagePlaceholder={CONTACT.messagePlaceholder}
         scopeOptions={CONTACT.scopeOptions}
-      />
+      /> disabled until email sending is wired up */}
       <Footer />
     </div>
   );

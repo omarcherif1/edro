@@ -6,7 +6,7 @@ import ConstructionSequence from "../components/division/ConstructionSequence";
 import MaintenanceRepair from "../components/division/MaintenanceRepair";
 import QualityDocumentation from "../components/division/QualityDocumentation";
 import DownloadCTA from "../components/division/DownloadCTA";
-import ContactForm from "../components/division/ContactForm";
+// import ContactForm from "../components/division/ContactForm"; // disabled until email sending is wired up
 import WhatWeBuild from "../components/division/piping/WhatWeBuild";
 import Comparison from "../components/division/piping/Comparison";
 import heroPhoto from "../assets/edro/piping5.png";
@@ -39,12 +39,12 @@ export default function PipingAndPipelines() {
       />
       <QualityDocumentation num="06" dossiers={DOSSIERS} />
       <DownloadCTA title={DOWNLOAD_TITLE} />
-      <ContactForm
+      {/* <ContactForm
         heading={CONTACT.heading}
         desc={CONTACT.desc}
         messagePlaceholder={CONTACT.messagePlaceholder}
         scopeOptions={CONTACT.scopeOptions}
-      />
+      /> disabled until email sending is wired up */}
       <Footer />
     </div>
   );
